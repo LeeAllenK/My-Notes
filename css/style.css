@@ -1,0 +1,73 @@
+body{
+	background-color: black;
+	font-size: 30px;
+	font-weight: 900;
+}
+
+.app {
+	color: rgb(252, 251, 251);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.fa-lightbulb{
+	float: left;
+	color:	rgb(255, 255, 255);
+	margin: 2px;
+
+}
+
+#text {
+	font-size: 30px;
+	font-weight: bolder;
+	border: 1px solid black;;
+	border-left: none;
+	border-right: none;
+	border-top: none;
+	border-bottom: none;
+	text-transform: uppercase;
+}
+
+
+.colorMode {
+	background-color: rgb(252, 252, 252);
+	color: rgb(7, 7, 7);
+	border-color: black;
+}
+
+.colorMode2{
+	background-color: rgb(12, 12, 12);
+	color: white;
+}
+
+
+ul {
+
+	list-style: none;
+}
+
+#add {
+	font-size: 30px;
+	font-weight: 900;
+}
+.checkbox {
+
+	float: left;
+	transform: scale(1.5);
+}
+
+
+li {
+
+	border: 1px solid white;
+	border-left: none;
+	border-right: none;
+	border-top: none;
+	border-bottom: none;
+	padding: 5px;
+	text-transform: uppercase;
+}
+
+.strike {
+	text-decoration: line-through;
+}
