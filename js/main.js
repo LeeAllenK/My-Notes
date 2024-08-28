@@ -1,6 +1,6 @@
 const addButton = document.getElementById('add');
 const ul = document.querySelector('ul');
-const items = document.querySelector('li');
+const items = document.querySelector('.list');
 const background = document.querySelector('.background');
 const app = document.querySelector('.app');
 const lightbulb = document.querySelector('.fa-lightbulb');
@@ -13,9 +13,10 @@ lightbulb.addEventListener('click' , (e) => {
 	e.target.classList.toggle('colorMode');
 	app.classList.toggle('colorMode');
 	add.classList.toggle('colorMode2')
-
+	items.classList.toggle('lineColorLight')
+	// items.classList.toggle('lineColorDark')
 })
-
+console.log(items.textContent)
 //Keypress event to display data when 'Enter' pressed
 Note.addEventListener('keypress', (e) => {
 	if(e.key === 'Enter') {
@@ -59,14 +60,15 @@ let note = document.getElementById('text').value;
 	li.appendChild(space)
 	li.appendChild(label);
 	li.appendChild(del);
-	ul.appendChild(li);
+	items.appendChild(li)
+	ul.appendChild(items)
 	
 	
 	const allNotes = document.querySelectorAll('li');
 //note and appended elements show in list	
 	for(let i = 0; i < allNotes.length; i++){
 			
-		notes.push(allNotes[i].innerText);
+		notes.push(allNotes[i].textContent);
 	}
 
 //Storage storing and getting stored notes	
