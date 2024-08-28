@@ -32,12 +32,13 @@ body{
 .colorMode {
 	background-color: rgb(252, 252, 252);
 	color: rgb(7, 7, 7);
-	border-color: black;
+	
 }
 
 .colorMode2{
 	background-color: rgb(12, 12, 12);
 	color: white;
+	
 }
 
 
@@ -57,16 +58,20 @@ ul {
 }
 
 
-li {
 
-	border: 1px solid white;
+li {
+	
+	border: 1px solid rgb(248, 244, 244);
+	font-size: 60px;
 	border-left: none;
 	border-right: none;
 	border-top: none;
-	border-bottom: none;
+	border-bottom: 2px solid rgb(248, 249, 250);
 	padding: 5px;
 	text-transform: uppercase;
 }
+
+
 
 .strike {
 	text-decoration: line-through;
