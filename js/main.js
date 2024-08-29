@@ -11,7 +11,6 @@ const Note = document.querySelector('input');
 		background.classList.toggle('colorMode');
 		e.target.classList.toggle('colorMode');
 		app.classList.toggle('colorMode');
-		add.classList.toggle('colorMode2');
 		addButton.classList.toggle('btnColor')	
 	})
 
