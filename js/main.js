@@ -34,11 +34,6 @@ let note = document.getElementById('text').value;
 		document.getElementById('text').value = '';
 	}
 
-//Created elements to append to ul
-
-	//Space created between text and trash can
-	// let space = document.createTextNode("\t");
-
 	//Created elements to append to li
 	let li = document.createElement('li');
 	let label = document.createElement('label');
