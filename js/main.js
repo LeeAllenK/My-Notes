@@ -4,19 +4,16 @@ const items = document.querySelector('.list');
 const background = document.querySelector('.background');
 const app = document.querySelector('.app');
 const lightbulb = document.querySelector('.fa-lightbulb');
-const add = document.getElementById('add');
 const Note = document.querySelector('input');
 
 //Switch between light && dark mode!
-lightbulb.addEventListener('click' , (e) => {
-	background.classList.toggle('colorMode');
-	e.target.classList.toggle('colorMode');
-	app.classList.toggle('colorMode');
-	add.classList.toggle('colorMode2')
-	items.classList.toggle('lineColorLight')
-	// items.classList.toggle('lineColorDark')
-})
-console.log(items.textContent)
+	lightbulb.addEventListener('click', (e) => {
+		background.classList.toggle('colorMode');
+		e.target.classList.toggle('colorMode');
+		app.classList.toggle('colorMode');
+		addButton.classList.toggle('btnColor')	
+	})
+
 //Keypress event to display data when 'Enter' pressed
 Note.addEventListener('keypress', (e) => {
 	if(e.key === 'Enter') {
@@ -37,11 +34,6 @@ let note = document.getElementById('text').value;
 		document.getElementById('text').value = '';
 	}
 
-//Created elements to append to ul
-
-	//Space created between text and trash can
-	let space = document.createTextNode("\t");
-
 	//Created elements to append to li
 	let li = document.createElement('li');
 	let label = document.createElement('label');
@@ -56,13 +48,12 @@ let note = document.getElementById('text').value;
 
 	li.textContent = note;
 
+	//Appended Elements
 	label.appendChild(checkbox);
-	li.appendChild(space)
 	li.appendChild(label);
 	li.appendChild(del);
-	items.appendChild(li)
-	ul.appendChild(items)
-	
+	items.appendChild(li);
+	ul.appendChild(items);
 	
 	const allNotes = document.querySelectorAll('li');
 //note and appended elements show in list	
@@ -74,28 +65,16 @@ let note = document.getElementById('text').value;
 //Storage storing and getting stored notes	
 	localStorage.setItem('notes', JSON.stringify(notes));
 	let getStorage = localStorage.getItem('notes', JSON.stringify(notes));
+	
+//Checkbox
+	checkbox.addEventListener('click' , (e) => {
+		li.classList.toggle('strike');
 
-		console.log(getStorage);
-
+	})
 //Delete Button
 	del.addEventListener('click', e => {
-		ul.removeChild(li);
+		items.removeChild(li);
 	})
 
-//Listener to strike through text
-	li.addEventListener('click' , getStrike);
-
 });
-
-//Strike through function if prefared instead of checking box line does partially cover text
-function getStrike(e){
-
-	if(e.target.classList.value === 'noStrike'){
-			e.target.classList.add('strike')
-	}else {
-		e.target.classList.toggle('strike')  
-	}
-}
-
-
 
