@@ -47,7 +47,7 @@ let note = document.getElementById('text').value;
 	let checkbox = document.createElement('input');
 	let del = document.createElement('i');
 	li.classList.add('noStrike');
-	label.setAttribute('for' , 'notes')
+	label.setAttribute('for' , 'notes');
 	checkbox.classList.add('checkbox');
 	checkbox.setAttribute('type' , 'checkbox');
 	del.setAttribute('type' , 'button');
@@ -89,9 +89,9 @@ let note = document.getElementById('text').value;
 function getStrike(e){
 
 	if(e.target.classList.value === 'noStrike'){
-			e.target.classList.add('strike')
+			e.target.classList.add('strike');
 	}else {
-		e.target.classList.toggle('strike')  
+		e.target.classList.toggle('strike');  
 	}
 }
 
