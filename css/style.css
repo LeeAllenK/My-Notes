@@ -4,7 +4,7 @@ body{
 	font-weight: 900;
 }
 
-.app{
+.app {
 	color: rgb(252, 251, 251);
 	display: flex;
 	flex-direction: column;
@@ -15,80 +15,55 @@ body{
 	float: left;
 	color:	rgb(255, 255, 255);
 	margin: 2px;
-<<<<<<< HEAD
-=======
-	cursor: pointer;
->>>>>>> 7d65410441d290a7db7627b590ab87631a120aba
 }
 
-#text{
+#text {
 	font-size: 30px;
 	font-weight: bolder;
-	border: 2px solid black;;
-	border-radius: 15px;
+	border: 1px solid black;;
+	border-left: none;
+	border-right: none;
+	border-top: none;
+	border-bottom: none;
+	text-transform: uppercase;
 }
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 7d65410441d290a7db7627b590ab87631a120aba
 .colorMode{
 	background-color: rgb(252, 252, 252);
 	color: rgb(7, 7, 7);
-	
+	border-color: black;
 }
 
 .colorMode2{
-	background-color: rgb(255, 255, 255);
-	color: rgb(8, 8, 8);
-}
-
-<<<<<<< HEAD
-ul {
-=======
-
-.btnColor{
-	background-color: black;
+	background-color: rgb(12, 12, 12);
 	color: white;
 }
 
-ul{
->>>>>>> 7d65410441d290a7db7627b590ab87631a120aba
+ul {
 
 	list-style: none;
 }
 
-#add{
+#add {
 	font-size: 30px;
 	font-weight: 900;
-	border-radius: 15px;
-	cursor: pointer;
 }
-
 .checkbox {
 	float: left;
 	transform: scale(1.5);
-	cursor: pointer;
 }
 
-<<<<<<< HEAD
 li {
 	border: 1px solid white;
 	border-left: none;
 	border-right: none;
 	border-top: none;
 	border-bottom: none;
-=======
-li{
-	font-size: 45px;
->>>>>>> 7d65410441d290a7db7627b590ab87631a120aba
 	padding: 5px;
+	text-transform: uppercase;
 }
 
-.strike{
+.strike {
 	text-decoration: line-through;
-}
-
-.fa-trash-can{
-	cursor:pointer;
 }
