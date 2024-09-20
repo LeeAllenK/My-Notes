@@ -1,5 +1,6 @@
 body{
 	background-color: black;
+	font-family: serif;
 	font-size: 30px;
 	font-weight: 900;
 }
@@ -10,32 +11,44 @@ body{
 	flex-direction: column;
 	align-items: center;
 }
+.items{
+	color: white;
+}
+li a{
+
+	color: white;
+}
+.sMode{
+	color: black;
+}
 
 .fa-lightbulb{
 	float: left;
 	color:	rgb(255, 255, 255);
 	margin: 2px;
+	cursor: pointer;
 }
 
 #text {
 	font-size: 30px;
 	font-weight: bolder;
-	border: 1px solid black;;
-	border-left: none;
-	border-right: none;
-	border-top: none;
-	border-bottom: none;
+	border: 5px solid black;
+	border-radius: 15px 15px 15px 15px;
 	text-transform: uppercase;
 }
 
+.loginBtn{
+	font-weight: bolder;
+}
 
 .colorMode{
 	background-color: rgb(252, 252, 252);
 	color: rgb(7, 7, 7);
-	border-color: black;
+	
 }
 
 .colorMode2{
+	border: 3px solid white;
 	background-color: rgb(12, 12, 12);
 	color: white;
 }
@@ -48,6 +61,8 @@ ul {
 #add {
 	font-size: 30px;
 	font-weight: 900;
+	border-radius: 15px;
+	cursor: pointer;
 }
 .checkbox {
 	float: left;

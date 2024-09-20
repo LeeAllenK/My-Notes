@@ -6,16 +6,39 @@ const app = document.querySelector('.app');
 const lightbulb = document.querySelector('.fa-lightbulb');
 const add = document.getElementById('add');
 const Note = document.querySelector('input');
+let game = document.querySelector('.appBox');
+let signIn = document.querySelector('.log')
+let password = document.querySelector('.password')
+let link = document.querySelector('.link');
 
 //Switch between light && dark mode!
 lightbulb.addEventListener('click' , (e) => {
 	background.classList.toggle('colorMode');
 	e.target.classList.toggle('colorMode');
 	app.classList.toggle('colorMode');
-	add.classList.toggle('colorMode2')
-
+	add.classList.toggle('colorMode2');
+	signIn.classList.toggle('sMode');
+	password.classList.toggle('sMode');
+	link.classList.toggle('sMode');
+	Note.classList.toggle('colorMode2');
 })
 
+let log = document.querySelector('.loginOuter');
+let user = document.getElementById('user');
+let pw = document.getElementById('password');
+
+game.style.display = 'none';
+
+function login(){
+	u = user.value;
+	p = pw.value;
+
+	if(u === '' && p === '') {
+		game.style.display = 'block';
+		log.style.display = 'none';
+		
+	}
+}
 //Keypress event to display data when 'Enter' pressed
 Note.addEventListener('keypress', (e) => {
 	if(e.key === 'Enter') {
@@ -56,7 +79,7 @@ let note = document.getElementById('text').value;
 	li.textContent = note;
 
 	label.appendChild(checkbox);
-	li.appendChild(space)
+	li.appendChild(space);
 	li.appendChild(label);
 	li.appendChild(del);
 	ul.appendChild(li);
@@ -73,7 +96,7 @@ let note = document.getElementById('text').value;
 	localStorage.setItem('notes', JSON.stringify(notes));
 	let getStorage = localStorage.getItem('notes', JSON.stringify(notes));
 
-		console.log(getStorage);
+		
 
 //Delete Button
 	del.addEventListener('click', e => {
