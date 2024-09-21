@@ -7,10 +7,11 @@ const lightbulb = document.querySelector('.fa-lightbulb');
 const add = document.getElementById('add');
 const Note = document.querySelector('input');
 let game = document.querySelector('.appBox');
-let signIn = document.querySelector('.log')
+let signIn = document.querySelector('.sign-in')
 let password = document.querySelector('.password')
+let userText = document.querySelector('.user-text')
 let link = document.querySelector('.link');
-
+let loginBorder = document.querySelector('.items')
 //Switch between light && dark mode!
 lightbulb.addEventListener('click' , (e) => {
 	background.classList.toggle('colorMode');
@@ -20,7 +21,7 @@ lightbulb.addEventListener('click' , (e) => {
 	signIn.classList.toggle('sMode');
 	password.classList.toggle('sMode');
 	link.classList.toggle('sMode');
-	Note.classList.toggle('colorMode2');
+	loginBorder.classList.toggle('sMode')
 })
 
 let log = document.querySelector('.loginOuter');
@@ -66,6 +67,7 @@ let note = document.getElementById('text').value;
 
 	//Created elements to append to li
 	let li = document.createElement('li');
+	let ul = document.getElementById('ul-Notes')
 	let label = document.createElement('label');
 	let checkbox = document.createElement('input');
 	let del = document.createElement('i');
