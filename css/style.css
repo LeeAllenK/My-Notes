@@ -20,18 +20,50 @@ body{
 	color: white;
 	border: 5px solid rgb(255, 255, 255);
 }
-#user{
+.title{
+	text-align: center;
+}
+#user {
 	font-size: 20px;
 	font-weight: bolder;
+	border: 2px solid black;
 }
 
 #password{
 	font-size: 20px;
 	font-weight: bolder;
+	border: 2px solid black;
 }
-
+:hover > #user  {
+	background-color: rgb(0, 195, 255);
+}
+:hover > #password{
+	background-color: rgb(0, 195, 255);
+}
+.logColor{
+	background-color: rgb(0, 195, 255)
+}
+.no-user{
+	font-weight: normal;
+	font-size: 20px;
+	color: red;
+}
+.no-pass{
+	font-weight: normal;
+	font-size: 20px;
+	color: red;
+}
 li > a{
 	color: white;	
+}
+.loginBtn{
+	font-weight: bolder;
+	font-size: 20px;
+	border: 2px solid black;
+	cursor: pointer;
+}
+:hover > .loginBtn{
+	transform: scale(1.4);
 }
 
 .sMode{
@@ -54,9 +86,6 @@ li > a{
 	text-transform: uppercase;
 }
 
-.loginBtn{
-	font-weight: bolder;
-}
 
 .colorMode{
 	background-color: rgb(252, 252, 252);

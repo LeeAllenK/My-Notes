@@ -6,12 +6,19 @@ const app = document.querySelector('.app');
 const lightbulb = document.querySelector('.fa-lightbulb');
 const add = document.getElementById('add');
 const Note = document.querySelector('input');
-let game = document.querySelector('.appBox');
-let signIn = document.querySelector('.sign-in')
-let password = document.querySelector('.password')
-let userText = document.querySelector('.user-text')
-let link = document.querySelector('.link');
-let loginBorder = document.querySelector('.items')
+const game = document.querySelector('.appBox');
+const signIn = document.querySelector('.sign-in')
+const password = document.querySelector('.password')
+const userText = document.querySelector('.user-text')
+const link = document.querySelector('.link');
+const loginBorder = document.querySelector('.items')
+const noUser = document.querySelector('.no-user');
+const noPw = document.querySelector('.no-pass');
+const log = document.querySelector('.loginOuter');
+let user = document.getElementById('user');
+let pw = document.getElementById('password');
+const userColor = document.getElementById('user');
+const passColor = document.getElementById('password');
 //Switch between light && dark mode!
 lightbulb.addEventListener('click' , (e) => {
 	background.classList.toggle('colorMode');
@@ -24,9 +31,13 @@ lightbulb.addEventListener('click' , (e) => {
 	loginBorder.classList.toggle('sMode')
 })
 
-let log = document.querySelector('.loginOuter');
-let user = document.getElementById('user');
-let pw = document.getElementById('password');
+userColor.addEventListener('click' , (e) => {
+	userColor.classList.toggle('logColor')
+})
+passColor.addEventListener('click' , (e) => {
+	passColor.classList.toggle('logColor')
+})
+
 
 game.style.display = 'none';
 
@@ -34,10 +45,12 @@ function login(){
 	u = user.value;
 	p = pw.value;
 
-	if(u === '' && p === '') {
+	if(u === 'User@mail.com' && p === 'User') {
 		game.style.display = 'block';
 		log.style.display = 'none';
-		
+	}else{
+		noUser.textContent = 'incorrect username'
+		noPw.textContent = 'incorrect password'
 	}
 }
 //Keypress event to display data when 'Enter' pressed
