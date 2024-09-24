@@ -23,7 +23,7 @@ body{
 .title{
 	text-align: center;
 }
-#user {
+#email {
 	font-size: 20px;
 	font-weight: bolder;
 	border: 2px solid black;
@@ -110,6 +110,9 @@ ul {
 	border-radius: 15px;
 	cursor: pointer;
 }
+#add:hover{
+	transform: scale(1.3);
+}
 .checkbox {
 	float: left;
 	transform: scale(1.5);
@@ -124,7 +127,12 @@ li {
 	padding: 5px;
 	text-transform: uppercase;
 }
-
+.list:hover{
+	transform: scale(1.3);
+}
 .strike {
 	text-decoration: line-through;
+}
+.listNotes:hover{
+	transform: scale(2.0);
 }

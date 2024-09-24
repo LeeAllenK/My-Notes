@@ -15,9 +15,9 @@ const loginBorder = document.querySelector('.items')
 const noUser = document.querySelector('.no-user');
 const noPw = document.querySelector('.no-pass');
 const log = document.querySelector('.loginOuter');
-let user = document.getElementById('user');
+let user = document.getElementById('email');
 let pw = document.getElementById('password');
-const userColor = document.getElementById('user');
+const userColor = document.getElementById('email');
 const passColor = document.getElementById('password');
 //Switch between light && dark mode!
 lightbulb.addEventListener('click' , (e) => {
@@ -84,6 +84,7 @@ let note = document.getElementById('text').value;
 	let label = document.createElement('label');
 	let checkbox = document.createElement('input');
 	let del = document.createElement('i');
+	li.classList.add('listNotes');
 	li.classList.add('noStrike');
 	label.setAttribute('for' , 'notes');
 	checkbox.classList.add('checkbox');
