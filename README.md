@@ -3,7 +3,7 @@
 </div>
 Tech used: HTML, CSS, JavaScript
 <div id="header">
- <h1 align="center" class="heading-element" dir="auto">How It's Made:</h1>
+ <h1class="heading-element" dir="auto">How It's Made:</h1>
 </div>
 
 <div id="header" >
