@@ -6,7 +6,7 @@ const app = document.querySelector('.app');
 const lightbulb = document.querySelector('.fa-lightbulb');
 const add = document.getElementById('add');
 const Note = document.querySelector('input');
-const game = document.querySelector('.appBox');
+const appDisplay = document.querySelector('.appBox');
 const signIn = document.querySelector('.sign-in')
 const password = document.querySelector('.password')
 const userText = document.querySelector('.user-text')
@@ -39,14 +39,14 @@ passColor.addEventListener('click' , (e) => {
 })
 
 
-game.style.display = 'none';
+appDisplay.style.display = 'none';
 
 function login(){
 	u = user.value;
 	p = pw.value;
 
 	if(u === 'User@mail.com' && p === 'User') {
-		game.style.display = 'block';
+		appDisplay.style.display = 'block';
 		log.style.display = 'none';
 	}else{
 		noUser.textContent = 'incorrect username'
@@ -83,29 +83,41 @@ let note = document.getElementById('text').value;
 	let ul = document.getElementById('ul-Notes')
 	let label = document.createElement('label');
 	let checkbox = document.createElement('input');
-	let del = document.createElement('i');
+	let editBtn = document.createElement('button');
+	let delBtn = document.createElement('button');
+	let delIcon = document.createElement('i');
+	let editIcon = document.createElement('i');
+	label.classList.add('list')
+	editIcon.classList.add('fa-regular' , 'fa-pen-to-square');
+	delIcon.classList.add("fa-solid", "fa-trash-can");
 	li.classList.add('listNotes');
-	li.classList.add('noStrike');
+	li.classList.add('noStrike');	
+	li.setAttribute('contentEditable' , false)
+	editBtn.classList.add('edit');
+	delBtn.classList.add('del');
+	editBtn.setAttribute('type' , 'button');
+	delBtn.setAttribute('type' , 'button');
 	label.setAttribute('for' , 'notes');
 	checkbox.classList.add('checkbox');
 	checkbox.setAttribute('type' , 'checkbox');
-	del.setAttribute('type' , 'button');
-	del.classList.add("fa-solid", "fa-trash-can");
 
+	editBtn.innerText = 'EDIT';
+	delBtn.innerText = 'DELETE';
+
+	editBtn.appendChild(editIcon)
+	delBtn.appendChild(delIcon)
 	li.textContent = note;
 
-	label.appendChild(checkbox);
-	li.appendChild(space);
-	li.appendChild(label);
-	li.appendChild(del);
-	ul.appendChild(li);
-	
+	label.appendChild(li);
+	label.appendChild(delBtn);
+	label.appendChild(editBtn)
+	ul.appendChild(label);
+
 	
 	const allNotes = document.querySelectorAll('li');
 //note and appended elements show in list	
-	for(let i = 0; i < allNotes.length; i++){
-			
-		notes.push(allNotes[i].innerText);
+	for(let i = 0; i < allNotes.length; i++){		
+		notes.push(allNotes[i].textContent);
 	}
 
 //Storage storing and getting stored notes	
@@ -115,24 +127,17 @@ let note = document.getElementById('text').value;
 		
 
 //Delete Button
-	del.addEventListener('click', e => {
-		ul.removeChild(li);
+	delBtn.addEventListener('click', e => {
+		ul.removeChild(label);
 	})
 
-//Listener to strike through text
-	li.addEventListener('click' , getStrike);
+//Edit Button to edit text after input
+	editBtn.addEventListener('click' , (e) => {
+		e.stopPropagation();
+		li.contentEditable = true;
+	})
 
 });
-
-//Strike through function if prefared instead of checking box line does partially cover text
-function getStrike(e){
-
-	if(e.target.classList.value === 'noStrike'){
-			e.target.classList.add('strike');
-	}else {
-		e.target.classList.toggle('strike');  
-	}
-}
 
 
 
