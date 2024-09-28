@@ -5,7 +5,7 @@
 
 <div id="header" >
  <h1 class="heading-element" dir="auto">How It's Made:</h1>
- Tech used: HTML, CSS, JavaScript<br/>
+ Tech used: HTML, CSS, JavaScript<br/><br/>
  The focus for this application was more towards user experience while improving my coding skills. Users must login with a pre-assigned username and password to access note application. With the addition of the dark/light mode options users can adjust to specified liking. With the improvement of the user experience accessibility in this application shines to ensure full enjoyable experience for all users.
 </div>
 
