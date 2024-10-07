@@ -140,10 +140,6 @@ li {
 	text-transform: uppercase;
 }
 
-.listNotes:hover{
-	color:lightskyblue;
-}
-
 button{
 	font-family: serif;
 	font-size: 20px;
