@@ -17,7 +17,7 @@
 						<p>My Notes</p>
 					</div>
 					<li class="sign-in"><label for="email">UserName</label><br /></li>
-					<li class="user-text"><input type="email" id="email"  size="13" pattern=".+@mail.com" required /><span class="no-user"></span><br /></li>
+					<li class="user-email"><input type="email" id="email"  size="13" pattern=".+@mail.com" required /><span class="no-user"></span><br /></li>
 					<li class="password"><label for="password">Password</label><br /></li>
 					<li class="user-pw"><input type="text" id="password" name="password" required /><span class="no-pass"></span><br /></li>
 					<li ><button class="loginBtn" onclick="login()">Login</button></li>
@@ -31,7 +31,7 @@
 			<br/>
 			<label class='info' for="on">
 				<input id='text' type="text" placeholder="Add a note!" minlength="1" maxlength="60"/>
-				<input id="add" type="button" value="ADD"/>
+				<input id="add" class="addEvt" type="button" value="ADD"/>
 				
 			</label>
 			<ul id="ul-Notes">

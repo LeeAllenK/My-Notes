@@ -45,12 +45,12 @@ function login(){
 	u = user.value;
 	p = pw.value;
 
-	if(u === 'User@mail.com' && p === 'User') {
+	if(u === 'User@mail.com'.toLowerCase() || u === 'User@mail.com' && p === 'User') {
 		appDisplay.style.display = 'block';
 		log.style.display = 'none';
 	}else{
-		noUser.textContent = 'incorrect username'
-		noPw.textContent = 'incorrect password'
+		noUser.textContent = ' incorrect username'
+		noPw.textContent = ' incorrect password'
 	}
 }
 //Keypress event to display data when 'Enter' pressed
@@ -135,6 +135,7 @@ let note = document.getElementById('text').value;
 	editBtn.addEventListener('click' , (e) => {
 		e.stopPropagation();
 		li.contentEditable = true;
+		li.classList.add('hoverList');
 	})
 
 });
