@@ -45,11 +45,9 @@ function login(){
 	u = user.value;
 	p = pw.value;
 
-	if(u === 'User@mail.com'.toLowerCase() || u === 'User@mail.com') {
-		if(p === 'User'){
+	if(u === 'user@mail.com' && p === 'User') {
 		appDisplay.style.display = 'block';
 		log.style.display = 'none';
-		}
 	}else{
 		noUser.textContent = ' incorrect username'
 		noPw.textContent = ' incorrect password'
